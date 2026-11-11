@@ -12,7 +12,8 @@ const nextConfig: NextConfig = {
   output: "export", // fully static: Pages has no server
   trailingSlash: true, // /work/ -> work/index.html, which Pages serves natively
   basePath,
-  images: { unoptimized: true }, // the image optimiser needs a server
+  // The image optimiser needs a server, so use a loader that only fixes the path.
+  images: { loader: "custom", loaderFile: "./src/lib/image-loader.ts" },
 };
 
 export default nextConfig;
