@@ -42,4 +42,10 @@ export const stagger = (step = 0.08, delay = 0.05): Variants => ({
 });
 
 /** Viewport config for scroll-triggered reveals. */
-export const viewportOnce = { once: true, amount: 0.25 } as const;
+/**
+ * `amount: "some"` (any pixel visible), not a fraction. A fraction is measured
+ * against the element's own height, so on a phone a tall stacked grid (six team
+ * cards in one column) can need more than a screenful visible at once — the
+ * observer never fires and the content stays at opacity 0.
+ */
+export const viewportOnce = { once: true, amount: "some" } as const;
