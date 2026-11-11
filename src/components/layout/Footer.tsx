@@ -1,7 +1,8 @@
-import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
-import { site } from "@/content/site";
 import { socialHref, socialLabels } from "@/lib/socials";
+
+import { ArrowUpRight } from "lucide-react";
+import Link from "next/link";
+import { site } from "@/content/site";
 
 const columns = [
   {
@@ -50,7 +51,7 @@ export function Footer() {
           </nav>
         ))}
 
-        <div>
+        {/* <div>
           <h2 className="font-mono text-xs tracking-[0.2em] text-fg-subtle uppercase">
             Elsewhere
           </h2>
@@ -79,7 +80,7 @@ export function Footer() {
               </li>
             ))}
           </ul>
-        </div>
+        </div> */}
       </div>
 
       <div className="mx-auto flex max-w-7xl flex-col gap-2 border-t border-surface-border px-6 py-6 text-xs text-fg-subtle sm:flex-row sm:items-center sm:justify-between">

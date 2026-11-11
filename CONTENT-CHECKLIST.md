@@ -3,7 +3,7 @@
 ## Current status (updated)
 
 **In and live on the site:**
-- **Team name: The Knights.** Drives the logo, every page title, the footer and
+- **Team name: The ByteBonds.** Drives the logo, every page title, the footer and
   the OG images.
 - 5 members by name and role: Prajjwal Tawri (Backend/Go), Milind Sahu
   (Backend/Django), Ashwani Singh (DevOps), Milind Thakur (AI/ML), Fatma Dalvi.

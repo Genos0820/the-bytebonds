@@ -1,9 +1,10 @@
-import type { Metadata } from "next";
-import { processSteps, site } from "@/content/site";
-import { formspreeEndpoint } from "@/lib/contact";
-import { PageHeader } from "@/components/ui/PageHeader";
 import { Reveal, RevealGroup, RevealItem } from "@/components/ui/Reveal";
+import { processSteps, site } from "@/content/site";
+
 import { ContactForm } from "@/components/contact/ContactForm";
+import type { Metadata } from "next";
+import { PageHeader } from "@/components/ui/PageHeader";
+import { formspreeEndpoint } from "@/lib/contact";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -46,9 +47,12 @@ export default function ContactPage() {
                   Tell us the problem, who it&rsquo;s for, and any deadline
                   you&rsquo;re working to.
                 </p>
-                <p className="mt-4 border-t border-surface-border pt-4 font-mono text-[0.65rem] tracking-wider text-fg-subtle uppercase">
-                  Form pending setup — see .env.example
-                </p>
+                <a
+                  href="mailto:thebytebonds@gmail.com"
+                  className="mt-4 block border-t border-surface-border pt-4 font-mono text-[0.65rem] tracking-wider text-fg-subtle hover:text-fg transition-colors cursor-pointer"
+                >
+                  thebytebonds@gmail.com
+                </a>
               </div>
             )}
           </Reveal>

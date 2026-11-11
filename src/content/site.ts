@@ -5,16 +5,14 @@ import type { ProcessStep, SiteConfig, Testimonial } from "./types";
  * See CONTENT-CHECKLIST.md in the project root.
  */
 export const site: SiteConfig = {
-  name: "The Knights",
+  name: "The ByteBonds",
   tagline: "A collective of six builders",
   description:
-    "The Knights is a six-person team of backend, DevOps, AI/ML, frontend and QA engineers building web platforms, data products and cloud systems for clients worldwide.",
+    "The ByteBonds is a six-person team of backend, DevOps, AI/ML, frontend and QA engineers building web platforms, data products and cloud systems for clients worldwide.",
   url: "https://genos0820.github.io/the-knights-portfolio",
   // contactEmail: "hello@your-domain.com", // TODO — set when a shared inbox exists
   location: "India — working worldwide",
-  socials: [
-    { platform: "github", url: "https://github.com/Genos0820" },
-  ],
+  socials: [{ platform: "github", url: "https://github.com/Genos0820" }],
   stats: [
     { label: "Projects delivered", value: "8" },
     { label: "Years combined experience", value: "28" },
