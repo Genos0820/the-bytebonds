@@ -41,11 +41,13 @@ export const stagger = (step = 0.08, delay = 0.05): Variants => ({
   },
 });
 
-/** Viewport config for scroll-triggered reveals. */
 /**
- * `amount: "some"` (any pixel visible), not a fraction. A fraction is measured
- * against the element's own height, so on a phone a tall stacked grid (six team
- * cards in one column) can need more than a screenful visible at once — the
- * observer never fires and the content stays at opacity 0.
+ * Viewport config for scroll-triggered reveals.
+ *
+ * `amount: "some"` (any pixel visible), NOT a fraction. A fraction is measured
+ * against the element's own height: the team grid is ~3200px tall on a phone
+ * (one card per row), so `0.25` demanded 800px of it on screen at once — more
+ * than the visible area after the header — and the observer never fired. The
+ * whole team section stayed at opacity 0 on mobile.
  */
 export const viewportOnce = { once: true, amount: "some" } as const;
