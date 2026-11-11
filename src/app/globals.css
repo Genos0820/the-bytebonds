@@ -1,0 +1,84 @@
+@import "tailwindcss";
+@import "../styles/themes.css";
+
+@theme inline {
+  --font-sans: var(--font-display), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-mono-code), ui-monospace, monospace;
+}
+
+* {
+  min-width: 0;
+}
+
+html {
+  /* Lenis drives smooth scrolling; native smooth scroll would fight it. */
+  scroll-behavior: auto;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: clip;
+}
+
+/* A long unbroken token — a slug, a URL, a client name with underscores — will
+   otherwise run past its container and be clipped by the body's overflow rule,
+   silently hiding content. Headings are where this bites, because they are the
+   largest type on the page. */
+h1,
+h2,
+h3,
+h4 {
+  overflow-wrap: break-word;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--accent-fg);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* A WebGL canvas and parallax are decoration. Anyone who has asked their OS to
+   reduce motion gets the static layout instead — this is an accessibility
+   requirement, not a nice-to-have. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Translates exactly -50%, which is where the duplicated half of the Marquee
+   track begins — any other value makes the loop visibly jump. */
+@keyframes marquee {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@utility glass {
+  background: var(--surface);
+  border: 1px solid var(--surface-border);
+  border-radius: var(--radius);
+  backdrop-filter: blur(var(--blur));
+  box-shadow: var(--shadow);
+}
+
+@utility grid-bg {
+  background-image: linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+  background-size: 64px 64px;
+}

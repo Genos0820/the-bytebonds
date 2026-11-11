@@ -1,0 +1,121 @@
+/**
+ * Three visual directions as interchangeable token sets.
+ *
+ * Switch by setting `data-theme` on <html> in src/app/layout.tsx:
+ *   midnight — dark glassmorphism + neon gradients
+ *   paper    — light minimal, bold typography, lots of air
+ *   press    — brutalist editorial, high-contrast blocks
+ *
+ * Components only ever reference the semantic tokens below (bg, surface, fg,
+ * accent…), never a raw hex. That is what makes the whole site reskin from one
+ * attribute instead of a find-and-replace across every file.
+ */
+
+/* ── Direction A: Midnight ─────────────────────────────────────────────── */
+:root,
+[data-theme="midnight"] {
+  --bg: oklch(0.16 0.02 265);
+  --bg-elevated: oklch(0.21 0.025 265);
+  --surface: oklch(0.24 0.03 265 / 0.55);
+  --surface-border: oklch(0.72 0.04 265 / 0.16);
+  --fg: oklch(0.97 0.005 265);
+  --fg-muted: oklch(0.72 0.02 265);
+  /* L=0.62, not 0.56. At 0.56 this measured 4.20:1 on --bg and 3.83:1 on
+     --bg-elevated, both under the 4.5:1 WCAG AA floor for normal text — and
+     this token carries the stat labels, chips and meta text, so it was the
+     single biggest accessibility problem on the site. 0.62 measures 5.32:1 and
+     4.86:1. Don't lower it. */
+  --fg-subtle: oklch(0.62 0.02 265);
+
+  --accent: oklch(0.72 0.19 295);
+  --accent-fg: oklch(0.16 0.02 265);
+  --accent-2: oklch(0.78 0.16 195);
+  --accent-3: oklch(0.74 0.2 15);
+
+  --glow: 0 0 60px oklch(0.72 0.19 295 / 0.35);
+  --shadow: 0 24px 60px -20px oklch(0.08 0.02 265 / 0.8);
+  --radius: 1.25rem;
+  --blur: 16px;
+
+  --grid-line: oklch(0.72 0.04 265 / 0.07);
+
+  /* 3D scene */
+  --scene-fog: #151323;
+  --scene-key: #b388ff;
+  --scene-rim: #4dd0e1;
+  --scene-material: #2a2440;
+}
+
+/* ── Direction B: Paper ────────────────────────────────────────────────── */
+[data-theme="paper"] {
+  --bg: oklch(0.985 0.004 95);
+  --bg-elevated: oklch(1 0 0);
+  --surface: oklch(1 0 0 / 0.72);
+  --surface-border: oklch(0.2 0.01 95 / 0.12);
+  --fg: oklch(0.2 0.012 95);
+  --fg-muted: oklch(0.46 0.012 95);
+  --fg-subtle: oklch(0.62 0.01 95);
+
+  --accent: oklch(0.45 0.1 215);
+  --accent-fg: oklch(0.99 0.004 95);
+  --accent-2: oklch(0.42 0.09 150);
+  --accent-3: oklch(0.55 0.13 55);
+
+  --glow: none;
+  --shadow: 0 20px 50px -24px oklch(0.2 0.012 95 / 0.25);
+  --radius: 0.5rem;
+  --blur: 10px;
+
+  --grid-line: oklch(0.2 0.01 95 / 0.06);
+
+  --scene-fog: #f7f6f2;
+  --scene-key: #ffffff;
+  --scene-rim: #c8522f;
+  --scene-material: #e8e5dd;
+}
+
+/* ── Direction C: Press ────────────────────────────────────────────────── */
+[data-theme="press"] {
+  --bg: oklch(0.95 0.03 95);
+  --bg-elevated: oklch(0.99 0.02 95);
+  --surface: oklch(0.99 0.02 95);
+  --surface-border: oklch(0.15 0 0);
+  --fg: oklch(0.15 0 0);
+  --fg-muted: oklch(0.36 0 0);
+  --fg-subtle: oklch(0.5 0 0);
+
+  --accent: oklch(0.62 0.24 28);
+  --accent-fg: oklch(0.15 0 0);
+  --accent-2: oklch(0.78 0.18 95);
+  --accent-3: oklch(0.55 0.18 250);
+
+  --glow: none;
+  --shadow: 6px 6px 0 oklch(0.15 0 0);
+  --radius: 0rem;
+  --blur: 0px;
+
+  --grid-line: oklch(0.15 0 0 / 0.14);
+
+  --scene-fog: #f2ead8;
+  --scene-key: #ffffff;
+  --scene-rim: #e8491f;
+  --scene-material: #1a1a1a;
+}
+
+/* ── Map semantic tokens onto Tailwind utilities ───────────────────────── */
+@theme inline {
+  --color-bg: var(--bg);
+  --color-bg-elevated: var(--bg-elevated);
+  --color-surface: var(--surface);
+  --color-surface-border: var(--surface-border);
+  --color-fg: var(--fg);
+  --color-fg-muted: var(--fg-muted);
+  --color-fg-subtle: var(--fg-subtle);
+  --color-accent: var(--accent);
+  --color-accent-fg: var(--accent-fg);
+  --color-accent-2: var(--accent-2);
+  --color-accent-3: var(--accent-3);
+
+  --radius-theme: var(--radius);
+  --blur-theme: var(--blur);
+}
