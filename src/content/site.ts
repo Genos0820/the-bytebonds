@@ -9,7 +9,7 @@ export const site: SiteConfig = {
   tagline: "A collective of six builders",
   description:
     "The ByteBonds is a six-person team of backend, DevOps, AI/ML, frontend and QA engineers building web platforms, data products and cloud systems for clients worldwide.",
-  url: "https://genos0820.github.io/the-knights-portfolio",
+  url: "https://genos0820.github.io/the-bytebonds",
   contactEmail: "thebytebonds@gmail.com",
   location: "India — working worldwide",
   socials: [{ platform: "github", url: "https://github.com/Genos0820" }],

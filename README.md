@@ -66,10 +66,10 @@ npm run lint
 ## Deploying to GitHub Pages
 
 The site is exported as static HTML and served from the `gh-pages` branch at
-`https://genos0820.github.io/the-knights-portfolio/`.
+`https://genos0820.github.io/the-bytebonds/`.
 
 ```bash
-npm run deploy      # builds with the /the-knights-portfolio base path and pushes gh-pages
+npm run deploy      # builds with the /the-bytebonds base path and pushes gh-pages
 ```
 
 For a custom domain later: build with `npm run build` (no base path), set

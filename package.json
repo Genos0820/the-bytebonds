@@ -7,7 +7,7 @@
     "build": "next build --turbopack",
     "start": "next start",
     "lint": "eslint",
-    "build:pages": "NEXT_PUBLIC_BASE_PATH=/the-knights-portfolio NEXT_PUBLIC_SITE_URL=https://genos0820.github.io/the-knights-portfolio next build --turbopack && touch out/.nojekyll",
+    "build:pages": "NEXT_PUBLIC_BASE_PATH=/the-bytebonds NEXT_PUBLIC_SITE_URL=https://genos0820.github.io/the-bytebonds next build --turbopack && touch out/.nojekyll",
     "deploy": "bash scripts/deploy-pages.sh"
   },
   "dependencies": {

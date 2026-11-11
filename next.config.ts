@@ -3,7 +3,7 @@ import type { NextConfig } from "next";
 /**
  * GitHub Pages serves a project site from /<repo>, so the build needs a
  * basePath there. It's driven by an env var so `npm run dev` and a custom-domain
- * build both stay at the root: set NEXT_PUBLIC_BASE_PATH=/the-knights-portfolio
+ * build both stay at the root: set NEXT_PUBLIC_BASE_PATH=/the-bytebonds
  * only for the Pages build (see `npm run build:pages`).
  */
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
