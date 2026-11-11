@@ -20,12 +20,7 @@
 4. **Domain** — `site.url` is still `https://todo-your-domain.com`, which every
    canonical tag and the sitemap currently advertise.
 
-**A gap worth deciding on:** the five named members cover backend, DevOps and
-AI/ML. Nobody named covers frontend or design — but `services.ts` currently
-sells Product Design and Mobile Apps, and all three live projects have a
-front end. Either Fatma and the sixth member cover that, or the services list
-should be trimmed to what the team can staff. Claiming capability you can't
-deliver is the one thing on a portfolio that costs you a client twice.
+**Design coverage (resolved):** Milind Sahu, Prajjwal Tawri and Ashwani Singh cover design and architecture; Fatma and Ankit cover frontend and QA/data. Confirm whether "Product Design" in `services.ts` means visual UI design — if so, say who owns it.
 
 Everything below maps to a file in `src/content/`. You can paste answers to me
 in chat and I'll fill the files in, or edit the files directly — they're
