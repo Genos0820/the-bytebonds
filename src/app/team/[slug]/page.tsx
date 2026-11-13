@@ -143,10 +143,10 @@ export default async function MemberPage({
                   )}
                   <div>
                     <dt className="font-mono text-[0.6rem] tracking-[0.16em] text-fg-subtle uppercase">
-                      Projects here
+                      Projects
                     </dt>
                     <dd className="mt-1 text-lg font-semibold tabular-nums">
-                      {credits.length}
+                      {member.projectCount ?? credits.length}
                     </dd>
                   </div>
                 </dl>

@@ -38,6 +38,12 @@ export interface TeamMember {
   avatar: string;
   /** Skills shown as chips. Keep to 5–8 so cards stay readable. */
   skills: string[];
+  /**
+   * Overrides the "Projects" stat on the profile. By default the profile counts
+   * the case studies listed on this site; set this when someone has worked on
+   * more projects than are showcased here.
+   */
+  projectCount?: number;
   /** Years of professional experience, shown as a stat. */
   yearsExperience: number;
   location?: string;

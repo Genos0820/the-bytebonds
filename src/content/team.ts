@@ -32,6 +32,7 @@ export const team: TeamMember[] = [
     location: "India",
     socials: [],
     projects: ["one8data"],
+    projectCount: 5,
   },
   {
     slug: "milind-sahu",
