@@ -65,5 +65,12 @@ export const processSteps: ProcessStep[] = [
   },
 ];
 
-/** Leave empty until you have real, attributable quotes. Never invent these. */
+/**
+ * Client quotes. Empty until real ones exist — the section and the per-project
+ * quote block both render nothing while this array is, so the site is complete
+ * without them.
+ *
+ * See TESTIMONIALS.md in the project root: it has ready-to-send request
+ * messages for each client and the format to paste answers back in.
+ */
 export const testimonials: Testimonial[] = [];

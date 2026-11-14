@@ -140,8 +140,9 @@ Images:               (see spec below)
 12. **Process** — I've drafted a four-step Discovery → Design → Build → Launch.
     Does that match how you actually work?
 13. **Testimonials** — real, attributable quotes only (quote, name, role,
-    company). I've left this array empty deliberately; invented testimonials are
-    a liability, not a feature. Skip the section entirely if you have none yet.
+    company). The section is built and hides itself while the array is empty.
+    **See TESTIMONIALS.md** — it has a ready-to-send request message for each
+    of the three clients, so asking takes about five minutes.
 14. **Engagement model** — do you want to state it? Hourly / fixed-price /
     retainer, typical project size, typical timeline. Stating it filters out
     bad-fit enquiries before they reach your inbox.

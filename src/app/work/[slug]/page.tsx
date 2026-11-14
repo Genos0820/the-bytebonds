@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
 import { adjacentProjects, getProject, projects } from "@/content/projects";
+import { testimonials } from "@/content/site";
 import { getMember } from "@/content/team";
 import { publicAssetExists } from "@/lib/assets";
 import { categoryLabels } from "@/lib/categories";
@@ -14,6 +15,7 @@ import { Reveal, RevealGroup, RevealItem } from "@/components/ui/Reveal";
 import { AssetFallback } from "@/components/ui/AssetFallback";
 import { initialsOf } from "@/components/cards/MemberCard";
 import { ContactCTA } from "@/components/sections/ContactCTA";
+import { TestimonialCard } from "@/components/sections/TestimonialsSection";
 
 type Params = { slug: string };
 
@@ -59,6 +61,11 @@ export default async function ProjectPage({
   // the cover is informative; a grid of five placeholder tiles is just noise.
   const gallery = project.gallery.filter(publicAssetExists);
   const { previous, next } = adjacentProjects(project.slug);
+
+  // The client's own words about THIS project, directly under the story of it.
+  // Strongest placement a quote has: the reader has just finished the claim and
+  // immediately gets someone else confirming it.
+  const quote = testimonials.find((t) => t.projectSlug === project.slug);
 
   // Resolved once here, for the structured-data contributor list. A slug that
   // doesn't match a member is dropped rather than emitted as a broken credit.
@@ -228,6 +235,15 @@ export default async function ProjectPage({
           </section>
         </Reveal>
       </div>
+
+      {quote && (
+        <section className="mx-auto max-w-5xl px-6 pb-20 sm:pb-28">
+          <h2 className="sr-only">What the client said</h2>
+          <Reveal>
+            <TestimonialCard testimonial={quote} />
+          </Reveal>
+        </section>
+      )}
 
       {/* Gallery */}
       {gallery.length > 0 && (

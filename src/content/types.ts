@@ -117,14 +117,41 @@ export interface ProcessStep {
   description: string;
 }
 
+/**
+ * A client quote.
+ *
+ * RULE, and it is not negotiable: every entry here must be a real quote, from a
+ * real person, who has seen the exact wording and agreed to it appearing on
+ * this site. Not a paraphrase of something you remember them saying, and not
+ * something written on their behalf for them to approve later.
+ *
+ * Two reasons, in order of how much they would cost you. First, a prospective
+ * client who checks one quote and finds it was invented does not discount that
+ * quote — they discount the whole site, including the three projects that are
+ * genuinely yours. Second, fabricated endorsements are treated as misleading
+ * trade practice in most places you would want to be hired from, India
+ * included, and the client named in the quote is the person who finds out.
+ *
+ * `sourceUrl` is the strongest field here. A quote that links to a public
+ * LinkedIn recommendation or Google review is checkable, and checkable is the
+ * whole point of a testimonial.
+ */
 export interface Testimonial {
   quote: string;
   author: string;
-  /** e.g. "CTO, Northwind" */
+  /** e.g. "Editor-in-Chief, NJLRII" */
   authorRole: string;
   avatar?: string;
   /** Links the quote to a case study. */
   projectSlug?: string;
+  /** When it was given, e.g. "March 2026". Shown as context. */
+  date?: string;
+  /**
+   * Public URL where a reader can verify the quote themselves — the LinkedIn
+   * recommendation, Google review or tweet it came from. Rendered as a
+   * "Verify" link. Leave undefined for a quote given privately by email.
+   */
+  sourceUrl?: string;
 }
 
 export interface HeroCopy {
