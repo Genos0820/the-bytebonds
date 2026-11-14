@@ -181,3 +181,82 @@ and cost nothing:
   than three warm quotes. If you didn't instrument it, leave it out.
 
 Get one real quote and the section turns on. Get three and it carries the page.
+
+---
+
+# Draft quotes — to send, not to publish
+
+Below is a starting-point draft per project. **None of these may go on the site
+as written.** They exist so the client has something to react to instead of a
+blank page, because "here's a draft, change anything that's wrong" gets a reply
+far more often than "could you write us a testimonial?".
+
+How to use one:
+
+1. Fill the `[brackets]` — those are facts only you and the client know. Don't
+   guess them.
+2. Send it with the questions from the message above, saying plainly: *"I've
+   had a go at drafting this so you don't have to start from nothing — please
+   rewrite anything that isn't how you'd put it, or bin it and say it your own
+   way."*
+3. Publish **only** what comes back approved. If they edit it, the edited
+   version is the real one. If they don't reply, there is no testimonial.
+
+Each draft below deliberately claims only things visible on the live site. None
+of them asserts a number, a feeling or an outcome that you haven't verified —
+that's what the brackets are for, and a bracket you can't fill is a sentence
+that should come out.
+
+## NJLRII — for the editor or board member who commissioned it
+
+> "We came to [team] with [issues/volumes] worth of back catalogue and no real
+> system for handling submissions. What we have now is one place where authors
+> submit, the board reviews, and every issue stays findable afterwards. The
+> part I didn't expect to matter as much as it did was [X]."
+
+Shorter variant, if they'd rather not write much:
+
+> "They took a journal that was running on [email/spreadsheets] and gave it a
+> proper home. Submissions and peer review go through one place now, and the
+> archive is actually usable."
+
+## Kaale Coat Wale — for the founder
+
+> "We're two things at once — a legal academy for students and an advisory
+> practice for businesses — and I was worried a site would end up speaking to
+> neither. [Team] built something where both audiences find what they came for.
+> Since it went live we've seen [what you've noticed: enquiries, sign-ups,
+> fewer explaining-what-we-do calls]."
+
+Shorter variant:
+
+> "They understood that we serve students and businesses and that those are
+> different conversations. The site handles both without feeling like two
+> websites stitched together."
+
+## One8Data — for a user, or the client if it was commissioned
+
+Only use this if One8Data was built for someone. If it's your own product, ask
+a **user** instead — someone running it on their own workspace.
+
+> "Getting data out to the teams that needed it used to mean [what it used to
+> mean]. The thing that sold me was that queries run as the caller's own
+> identity, so our Unity Catalog grants keep applying — we didn't have to
+> loosen anything to make this work. [What takes how long now]."
+
+Shorter variant:
+
+> "Governance was the reason we hadn't done this already. Every call runs as
+> the caller, so our existing Unity Catalog permissions just keep working."
+
+## If the client asks you to write it for them
+
+This happens, and it's fine — some clients genuinely would rather approve than
+compose. Two conditions make it honest:
+
+- **Everything in it is true**, and you can say where each claim came from.
+- **They've read the exact words** and said yes to those words, in writing you
+  could produce later.
+
+What makes it dishonest is not who typed it. It's publishing a sentence the
+named person never actually agreed to.
