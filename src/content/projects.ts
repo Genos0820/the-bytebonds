@@ -35,6 +35,10 @@ export const projects: Project[] = [
       "milind-thakur",
       "ankit-paul",
     ],
+    note: {
+      author: "prajjwal-tawri",
+      body: "The easy version of this is one service account with broad read access and an API key per consumer. It ships in a week, and it quietly undoes whatever the data team decided about who can see what. We took the slower route: every query runs as the caller's own Databricks identity, so Unity Catalog grants are still the thing deciding the answer. That also keeps us from becoming the security model by accident — we aren't holding permissions, we're passing them through. The engine is read-only for now. That's a choice rather than a gap: a smaller surface is easier to be certain about while the approach proves itself.",
+    },
     liveUrl: "https://one8data.com",
     featured: true,
   },
@@ -61,6 +65,10 @@ export const projects: Project[] = [
     cover: "/work/njlrii-cover.jpg",
     gallery: [],
     team: ["milind-sahu", "fatma-dalvi", "ankit-paul"],
+    note: {
+      author: "milind-sahu",
+      body: "A journal is a workflow problem wearing a website. Submissions arrive continuously, each one has to reach the right reviewers, and nothing can fall between those two states — a dropped submission costs you an author who doesn't submit again. So we built the pipeline first and the pages second. The archive follows the same logic: issues stay addressable by volume long after anything stops linking to them from the front page, because that is how research actually gets found. We kept the typography plain on purpose. A legal journal does not need to look like a startup.",
+    },
     liveUrl: "https://njlrii.com",
     featured: true,
   },
@@ -84,6 +92,10 @@ export const projects: Project[] = [
     // NOTE: the bare domain kaalecoatwale.com serves an expired TLS certificate,
     // so it is linked via www, which does not. Worth fixing at the DNS/host end —
     // anyone typing the bare domain gets a browser security warning.
+    note: {
+      author: "fatma-dalvi",
+      body: "Two audiences who want opposite things. A law student is browsing and will read three articles before deciding whether to trust you. A founder who needs a company registered wants the service, the scope and a way to start, and resents every paragraph standing between them and it. The tempting fix is one averaged tone that serves neither. We gave each its own route in from the home page instead — the Academy is a section with its own pace, and the advisory services are direct about what they are and what you get. One brand, two speeds.",
+    },
     liveUrl: "https://www.kaalecoatwale.com",
     featured: true,
   },

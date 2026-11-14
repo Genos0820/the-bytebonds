@@ -16,6 +16,7 @@ import { AssetFallback } from "@/components/ui/AssetFallback";
 import { initialsOf } from "@/components/cards/MemberCard";
 import { ContactCTA } from "@/components/sections/ContactCTA";
 import { TestimonialCard } from "@/components/sections/TestimonialsSection";
+import { ProjectNote } from "@/components/sections/ProjectNote";
 
 type Params = { slug: string };
 
@@ -221,6 +222,14 @@ export default async function ProjectPage({
             </section>
           </Reveal>
         ))}
+
+        {/* Our own voice, under the narrative and above any client quote —
+            the order runs: what happened, why we chose it, what they thought. */}
+        {project.note && (
+          <Reveal>
+            <ProjectNote note={project.note} />
+          </Reveal>
+        )}
 
         <Reveal>
           <section className="grid gap-4 lg:grid-cols-[12rem_1fr] lg:gap-12">

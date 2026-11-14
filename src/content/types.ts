@@ -93,6 +93,22 @@ export interface Project {
   gallery: string[];
   /** Team member slugs who worked on it. */
   team: string[];
+  /**
+   * A signed note from the team member who led the project — our own voice,
+   * labelled as ours.
+   *
+   * This is NOT a testimonial and must never be styled as one. A testimonial
+   * is somebody else vouching for us; this is us explaining a decision and the
+   * trade-off behind it. Both are worth having, for different reasons, and a
+   * reader must be able to tell them apart at a glance.
+   *
+   * Write about a decision, not about how pleased we are with the result. The
+   * thing that makes these worth reading is that they name what we gave up.
+   *
+   * `author` is a team member slug. Each person should read and approve their
+   * own note — it goes out under their name.
+   */
+  note?: { author: string; body: string };
   liveUrl?: string;
   repoUrl?: string;
   /** Pins the project to the home page showcase. Keep 3–6 featured. */
