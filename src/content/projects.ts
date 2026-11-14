@@ -54,7 +54,13 @@ export const projects: Project[] = [
       "An academic journal lives or dies on process: submissions arrive continuously, peer review has to stay organised, and seven volumes of back-issues must remain findable for researchers. The brief was to bring all of that into one dependable, credible-looking home.",
     solution:
       "We built a publishing platform with a clean issue archive by volume, an open submissions pipeline, pages for each editorial board and the journal's published policies. Structure and typography were kept deliberately plain and scholarly so the research, not the interface, takes centre stage.",
-    metrics: [],
+    // Counted off the live archive on 14 Nov 2026 — anyone can click the
+    // live link and count the same thing, which is the whole point of a
+    // metric. Re-count when a new issue goes up.
+    metrics: [
+      { label: "Volumes archived", value: "7" },
+      { label: "Issues live", value: "26" },
+    ],
     stack: [
       "Issue Archive",
       "Submissions Workflow",
