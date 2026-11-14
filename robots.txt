@@ -1,0 +1,5 @@
+User-Agent: *
+Allow: /
+
+Host: https://genos0820.github.io/the-bytebonds
+Sitemap: https://genos0820.github.io/the-bytebonds/sitemap.xml

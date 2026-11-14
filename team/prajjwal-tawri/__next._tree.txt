@@ -1,0 +1,7 @@
+:HL["/the-bytebonds/_next/static/chunks/0sgemithmpawx.css","style"]
+:HL["/the-bytebonds/_next/static/media/237858b39a32779d-s.p.2cyn07wtgehh0.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/the-bytebonds/_next/static/media/53897e768d329f66-s.p.3t6q91iet4nsy.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+3:[["children",{"s":"__PAGE__","h":160}]]
+2:[["children",{"s":{"n":"slug","t":"d","k":"prajjwal-tawri","s":[]},"h":96,"c":"$Q3"}]]
+1:[["children",{"s":"team","h":64,"c":"$Q2"}]]
+0:{"b":"fP2VQl9lD6VQeoXZpmIL9","t":{"t":{"s":"","h":16,"c":"$Q1"}}}
